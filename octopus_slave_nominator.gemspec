@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["Toshiyuki.Takaki@gmail.com"]
 
   spec.summary       = %q{Octopus.slave select a slave server randomly}
-  spec.description   = %q{Octopus.slave select a slave server randomly}
+  spec.description   = %q{Octopus.slave select a slave server}
   spec.homepage      = "https://github.com/takakiNG"
   spec.license       = "MIT"
 
