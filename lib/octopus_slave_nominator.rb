@@ -14,12 +14,13 @@ end
 
 class Octopus::Proxy
   def slave_names
-    @slave_names ||=
-      if @shards.present?
-        @shards.keys.delete_if { |v| v == :master }
-      else
-        [:master]
-      end
+    return @slave_names if @slave_names
+    if @shards.blank?
+      return @slave_names = [:master]
+    end
+
+    slave_names = @shards.keys.delete_if { |v| v == :master }
+    @slave_names = slave_names.present? ? slave_names : [:master]
   end
 
   def slave_name
