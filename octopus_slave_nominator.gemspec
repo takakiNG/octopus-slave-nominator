@@ -25,4 +25,3 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "activerecord", ">= 3.0.0"
   spec.add_development_dependency "ar-octopus", ">= 0.3.4"
 end
-g
