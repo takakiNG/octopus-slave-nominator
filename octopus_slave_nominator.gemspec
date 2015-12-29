@@ -7,21 +7,20 @@ Gem::Specification.new do |spec|
   spec.name          = "octopus_slave_nominator"
   spec.version       = OctopusSlaveNominator::VERSION
   spec.authors       = ["Toshiyuki Takaki"]
-  spec.email         = ["ttakaki@aktsk.jp"]
+  spec.email         = ["Toshiyuki.Takaki@gmail.com"]
 
-  spec.summary       = %q{Octopus#slave select a slave server randomly}
-  spec.description   = %q{Octopus#slave select a slave server randomly}
+  spec.summary       = %q{Octopus.slave select a slave server randomly}
+  spec.description   = %q{Octopus.slave select a slave server randomly}
   spec.homepage      = "https://github.com/takakiNG"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "activerecord", ">= 3.0.0"
-  spec.add_development_dependency "ar-octopus", ">= 0.3.4"
+  spec.add_dependency "activerecord", ">= 3.0.0"
+  spec.add_dependency "ar-octopus", ">= 0.3.4"
 end
